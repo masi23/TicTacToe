@@ -67,13 +67,6 @@ char check_winner(char*** pboard) {
         symbol = (*pboard)[0][2];
         if (symbol != empty) return symbol;
     }
-
-    /*if (winner_found) {
-        printf("Player %c won. Congratulations!\n", winner_symbol);
-    }
-    else {
-        printf("Draw! No winner found\n");
-    }*/
     return symbol;
 }
 
@@ -117,7 +110,6 @@ void match(char*** pboard) {
             printf("Time for O\n");
         }
         scan_choice(&row, &col, pboard);
-        //printf("match()\nRow: %d\nColumn: %d\n", row, col);
         if (step % 2 == 0) {
             if ((*pboard)[row][col] == empty)
                 (*pboard)[row][col] = cross;
